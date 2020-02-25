@@ -11,7 +11,7 @@ public class TelevisionDemo
 		//create a Scanner object to read from the keyboard
 		Scanner keyboard = new Scanner (System.in);
 		//declare variables
-		int station; //the user’s channel choice
+		int station; //the userâ€™s channel choice
 		//declare and instantiate a television object
 		Television bigScreen = new Television("Toshiba", 55);
 		//turn the power on
@@ -54,11 +54,5 @@ public class TelevisionDemo
 		System.out.println("Channel: " + portable.getChannel() +
 				", Volume: " + portable.getVolume());
 		
-//		6. Use calls to the mutator methods to change the channel to the user’s preference and decrease the volume by two.
-//		7. Use calls to the accessor methods to print the changed state of the portable.
-//		8. Compile and debug this class.
-//		9. Run TelevisionDemo again.
-//		10. The output for task #5 will appear after the output from above, since we added onto the bottom of the program. The output for task #5 is shown below.
-
 		}
 	}
