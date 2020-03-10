@@ -1,3 +1,11 @@
+/**
+ * 
+ * Encrypts and decrypts strings using Caesar Cipher and Bellaso methods.
+ * 
+ * @author Rose Griffin
+ *
+ */
+
 public class CryptoManager {
 	
 	private static final char LOWER_BOUND = ' ';
@@ -27,7 +35,16 @@ public class CryptoManager {
 	 * @return the encrypted string
 	 */
 	public static String encryptCaesar(String plainText, int key) {
-		
+		String temp = "";
+		char newChar;
+		for (int i = 0; i < plainText.length(); i++) {
+			newChar = (char)(plainText.charAt(i)+key);
+			while (!stringInBounds(newChar+"")) {
+				newChar -= RANGE;
+			}
+			temp += newChar;
+		}
+		return temp;
 	}
 	
 	/**
@@ -51,7 +68,16 @@ public class CryptoManager {
 	 * @return the plain text string
 	 */
 	public static String decryptCaesar(String encryptedText, int key) {
-		throw new RuntimeException("method not implemented");
+		String temp = "";
+		char newChar;
+		for (int i = 0; i < encryptedText.length(); i++) {
+			newChar = (char)(encryptedText.charAt(i)-key);
+			while (!stringInBounds(newChar+"")) {
+				newChar += RANGE;
+			}
+			temp += newChar;
+		}
+		return temp;
 	}
 	
 	/**
