@@ -41,7 +41,7 @@ public class ManagementCompanyTest {
 		p4 = new Property ("Sunsational", "Beckman", 2613, "BillyBob Wilson",2,5,2,2);
 		p5 = new Property ("Mystic Cove", "Lakepointe", 5327, "Joey BagODonuts",4,5,2,2);
 		p6 = new Property ("Too Many Properties", "Lakepointe", 1000, "Joey BagODonuts",6,5,2,2);
-		 
+		
 		assertEquals(m.addProperty(p4),3,0);
 		assertEquals(m.addProperty(p5),4,0);
 		assertEquals(m.addProperty(p6),-1,0);  //exceeds the size of the array and can not be added, add property should return -1	
